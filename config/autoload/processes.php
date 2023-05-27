@@ -12,6 +12,6 @@ declare(strict_types=1);
  */
 return [
     //如果需要队列处理，可以开启下面代码
-    // \Hyperf\AsyncQueue\Process\ConsumerProcess::class,
-    // \Hyperf\Crontab\Process\CrontabDispatcherProcess::class,
+     \Hyperf\AsyncQueue\Process\ConsumerProcess::class,
+     \Hyperf\Crontab\Process\CrontabDispatcherProcess::class,
 ];

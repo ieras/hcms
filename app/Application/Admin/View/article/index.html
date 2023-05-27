@@ -1,0 +1,129 @@
+<div class="page-container" v-cloak>
+    <el-card>
+        <template #header>
+            <div class="breadcrumb">
+                <el-breadcrumb separator="/">
+                    <el-breadcrumb-item>文章列表</el-breadcrumb-item>
+                </el-breadcrumb>
+            </div>
+        </template>
+        <div>
+            <el-form :inline="true">
+                <el-form-item>
+                    <el-input v-model="where.title" placeholder="标题"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-input v-model="where.keywords" placeholder="关键词"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-select v-model="where.cate" placeholder="分类">
+                        <el-option label="不限" :value="0"></el-option>
+                        <el-option v-for="(item,index) in cate_list" :value="item.cate"
+                                   :label="item.cate_name"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item>
+                    <el-link>
+                        <el-button type="primary" @click="searchEvent">查询</el-button>
+                    </el-link>
+                    <el-link href="{:url('admin/article/edit')}">
+                        <el-button type="primary">新增</el-button>
+                    </el-link>
+                </el-form-item>
+            </el-form>
+        </div>
+        <div>
+            <el-table
+                    :data="data_list"
+                    style="width: 100%">
+                <el-table-column
+                        prop="article_id"
+                        label="ID"
+                        min-width="80">
+                </el-table-column>
+                <el-table-column
+                        prop="cate_name"
+                        min-width="100"
+                        label="分类">
+                </el-table-column>
+                <el-table-column
+                        prop="title"
+                        min-width="180"
+                        label="标题">
+                </el-table-column>
+                <el-table-column
+                        prop="keywords"
+                        min-width="180"
+                        label="关键词">
+                </el-table-column>
+                <el-table-column
+                        prop="created_at"
+                        width="160"
+                        label="创建时间">
+                </el-table-column>
+                <el-table-column
+                        align="center"
+                        min-width="180"
+                        label="操作">
+                    <template #default="{row}">
+                        <el-link :href="'{:url('admin/article/edit')}?article_id='+row.article_id">
+                            <el-button type="primary">编辑</el-button>
+                        </el-link>
+                        <el-link>
+                            <el-button @click="deleteEvent(row)" type="danger">删除</el-button>
+                        </el-link>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div class="pagination-container">
+                <el-pagination
+                        background
+                        layout="prev, pager, next"
+                        :total="total_num"
+                        :current-page="current_page"
+                        :page-size="per_page"
+                        @current-change="currentChangeEvent"
+                >
+                </el-pagination>
+            </div>
+        </div>
+    </el-card>
+</div>
+
+<script>
+    const App = {
+        data() {
+            return {
+                is_init_list: true,
+                cate_list: [],
+                where: {},
+            }
+        },
+        methods: {
+            GetList() {
+                this.httpGet("{:url('admin/article/index/lists')}", {
+                    page: this.current_page,
+                    ...this.where
+                }).then(res => {
+                    let {lists = {}, cate_list = []} = res.data
+                    this.cate_list = cate_list
+                    this.handRes(lists)
+                })
+            },
+            deleteEvent({article_id}) {
+                this.$confirm('是否确认删除该文章？', '提示').then(() => {
+                    this.httpDelete("{:url('admin/article/delete')}/" + article_id, {}).then(res => {
+                        if (res.status) {
+                            this.$message.success(res.msg)
+                            this.GetList()
+                        }
+                    })
+                }).catch(err => {
+                })
+            },
+            searchEvent() {
+                this.GetList()
+            }
+        }
+    }
+</script>

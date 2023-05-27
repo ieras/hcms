@@ -1,0 +1,92 @@
+<div class="page-container" v-cloak>
+    <el-card>
+        <template #header>
+            <div class="breadcrumb">
+                <el-breadcrumb separator="/">
+                    <el-breadcrumb-item><a href="{:url('admin/article/index')}">文章列表</a></el-breadcrumb-item>
+                    <el-breadcrumb-item>{$title}</el-breadcrumb-item>
+                </el-breadcrumb>
+            </div>
+        </template>
+        <div>
+            <el-form label-width="100px">
+                <el-form-item label="标题">
+                    <el-input v-model="form.title"></el-input>
+                </el-form-item>
+                <el-form-item label="关键词">
+                    <el-input v-model="form.keywords"></el-input>
+                </el-form-item>
+                <el-form-item label="内容">
+                    <ueditor :width="600" v-model="form.content" :init="form.content" @update="richUpdateEvent"></ueditor>
+<!--                    <el-input type="textarea" :rows="8" v-model="form.content"></el-input>-->
+                </el-form-item>
+                <el-form-item label="类型">
+                    <div>
+                        <el-select v-model="form.cate">
+                            <el-option v-for="(item,index) in cate_list" :value="item.cate"
+                                       :label="item.cate_name"></el-option>
+                        </el-select>
+                    </div>
+                </el-form-item>
+                <el-form-item>
+                    <el-button @click="submitEvent" type="primary">
+                        提交
+                    </el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </el-card>
+</div>
+{hcmstag:include file="admin@/components/ueditor"}
+<script>
+    const App = {
+        data() {
+            return {
+                cate_list:[],
+                form: {}
+            }
+        },
+        mounted() {
+            this.getInfo()
+        },
+        methods: {
+            richUpdateEvent(e) {
+                this.form.content = e;
+                console.log('richUpdateEvent', e)
+            },
+            /**
+             * 获取编辑所需信息
+             */
+            getInfo() {
+                let article_id = this.getUrlQuery('article_id', 0)
+                this.httpGet("{:url('admin/article/edit')}/" + article_id, {}).then(res => {
+                    if (res.status) {
+                        let {cate_list = [],article = {}} = res.data
+                        this.cate_list = cate_list
+                        if (article.article_id) {
+                            this.form = {
+                                ...article,
+                            }
+                        }
+                    }
+                })
+            },
+            /**
+             * 提交信息
+             */
+            submitEvent() {
+                this.httpPost("{:url('admin/article/edit')}", {
+                    ...this.form,
+                }).then(res => {
+                    if (res.status) {
+                        this.$message.success(res.msg)
+                        location.href = "{:url('admin/article/index')}"
+                    }
+                })
+            },
+        }
+    }
+</script>
+
+<style>
+</style>
