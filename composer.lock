@@ -214,7 +214,7 @@
             "version": "v1.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/doctrine/deprecations/v1.0.0/doctrine-deprecations-v1.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/doctrine/deprecations/v1.0.0/doctrine-deprecations-v1.0.0.zip",
                 "reference": "0e2a4f1f8cdfc7a92ec3b01c9334898c806b30de",
                 "shasum": ""
             },
@@ -247,7 +247,7 @@
             "version": "2.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/doctrine/inflector/2.0.6/doctrine-inflector-2.0.6.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/doctrine/inflector/2.0.6/doctrine-inflector-2.0.6.zip",
                 "reference": "d9d313a36c872fd6ee06d9a6cbcf713eaa40f024",
                 "shasum": ""
             },
@@ -360,7 +360,7 @@
             "version": "2.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/doctrine/lexer/2.1.0/doctrine-lexer-2.1.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/doctrine/lexer/2.1.0/doctrine-lexer-2.1.0.zip",
                 "reference": "39ab8fcf5a51ce4b85ca97c7a7d033eb12831124",
                 "shasum": ""
             },
@@ -465,7 +465,7 @@
             "version": "1.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/fig/http-message-util/1.1.5/fig-http-message-util-1.1.5.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/fig/http-message-util/1.1.5/fig-http-message-util-1.1.5.zip",
                 "reference": "9d94dc0154230ac39e5bf89398b324a86f63f765",
                 "shasum": ""
             },
@@ -511,7 +511,7 @@
             "version": "v1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/graham-campbell/result-type/v1.1.1/graham-campbell-result-type-v1.1.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/graham-campbell/result-type/v1.1.1/graham-campbell-result-type-v1.1.1.zip",
                 "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
                 "shasum": ""
             },
@@ -550,16 +550,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.5.1",
+            "version": "7.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/guzzlehttp/guzzle/7.5.1/guzzlehttp-guzzle-7.5.1.zip",
-                "reference": "b964ca597e86b752cd994f27293e9fa6b6a95ed9",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/guzzlehttp/guzzle/7.7.0/guzzlehttp-guzzle-7.7.0.zip",
+                "reference": "fb7566caccf22d74d1ab270de3551f72a58399f5",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "guzzlehttp/promises": "^1.5",
+                "guzzlehttp/promises": "^1.5.3 || ^2.0",
                 "guzzlehttp/psr7": "^1.9.1 || ^2.4.5",
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-client": "^1.0",
@@ -571,7 +571,8 @@
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8.1",
                 "ext-curl": "*",
-                "php-http/client-integration-tests": "^3.0",
+                "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
+                "php-http/message-factory": "^1.1",
                 "phpunit/phpunit": "^8.5.29 || ^9.5.23",
                 "psr/log": "^1.1 || ^2.0 || ^3.0"
             },
@@ -585,9 +586,6 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
-                },
-                "branch-alias": {
-                    "dev-master": "7.5-dev"
                 }
             },
             "autoload": {
@@ -650,33 +648,32 @@
                 "rest",
                 "web service"
             ],
-            "time": "2023-04-17T16:30:08+00:00"
+            "time": "2023-05-21T14:04:53+00:00"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.2",
+            "version": "2.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.cloud.tencent.com/repository/composer/guzzlehttp/promises/1.5.2/guzzlehttp-promises-1.5.2.zip",
-                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/guzzlehttp/promises/2.0.0/guzzlehttp-promises-2.0.0.zip",
+                "reference": "3a494dc7dc1d7d12e511890177ae2d0e6c107da6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^4.4 || ^5.1"
+                "bamarni/composer-bin-plugin": "^1.8.1",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\Promise\\": "src/"
                 }
@@ -710,7 +707,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2022-08-28T14:55:35+00:00"
+            "time": "2023-05-21T13:50:22+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -809,7 +806,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/async-queue/v3.0.18/hyperf-async-queue-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/async-queue/v3.0.18/hyperf-async-queue-v3.0.18.zip",
                 "reference": "7e7b558492a80ac29baeffe1942709a062d087aa",
                 "shasum": ""
             },
@@ -861,7 +858,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/cache/v3.0.18/hyperf-cache-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/cache/v3.0.18/hyperf-cache-v3.0.18.zip",
                 "reference": "3aa17db23b983010de3f8646912a1d3c2bc9be8c",
                 "shasum": ""
             },
@@ -910,7 +907,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/code-parser/v3.0.18/hyperf-code-parser-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/code-parser/v3.0.18/hyperf-code-parser-v3.0.18.zip",
                 "reference": "f1812421150d7ef95067eb6657c6f84514b6dfea",
                 "shasum": ""
             },
@@ -953,7 +950,7 @@
             "version": "v3.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/codec/v3.0.1/hyperf-codec-v3.0.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/codec/v3.0.1/hyperf-codec-v3.0.1.zip",
                 "reference": "7d3cbfa06c50ef52809acadfcbcd59424366f591",
                 "shasum": ""
             },
@@ -989,11 +986,11 @@
         },
         {
             "name": "hyperf/collection",
-            "version": "v3.0.20",
+            "version": "v3.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/collection/v3.0.20/hyperf-collection-v3.0.20.zip",
-                "reference": "7203fc53bd9bd82e511ed26d33c0746986c762f4",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/collection/v3.0.21/hyperf-collection-v3.0.21.zip",
+                "reference": "40649d7d24c06e9e76e6fd53ea7e4f5e3acdb1ba",
                 "shasum": ""
             },
             "require": {
@@ -1026,14 +1023,14 @@
                 "php",
                 "swoole"
             ],
-            "time": "2023-05-10T01:30:28+00:00"
+            "time": "2023-05-16T12:21:01+00:00"
         },
         {
             "name": "hyperf/command",
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/command/v3.0.18/hyperf-command-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/command/v3.0.18/hyperf-command-v3.0.18.zip",
                 "reference": "35840669a3e1fb9e0c0eda8fc017d99612b83577",
                 "shasum": ""
             },
@@ -1111,7 +1108,7 @@
             "version": "v3.0.20",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/config/v3.0.20/hyperf-config-v3.0.20.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/config/v3.0.20/hyperf-config-v3.0.20.zip",
                 "reference": "6503882f8547809d609b9489170037ceaef04962",
                 "shasum": ""
             },
@@ -1166,7 +1163,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/context/v3.0.18/hyperf-context-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/context/v3.0.18/hyperf-context-v3.0.18.zip",
                 "reference": "8cff8cc1c70c1a8c390a13b97986ddd5e47fa2ec",
                 "shasum": ""
             },
@@ -1203,7 +1200,7 @@
             "version": "v3.0.10",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/contract/v3.0.10/hyperf-contract-v3.0.10.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/contract/v3.0.10/hyperf-contract-v3.0.10.zip",
                 "reference": "93488df36b1c4e2fc16c630fb77c110bafffb141",
                 "shasum": ""
             },
@@ -1238,7 +1235,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/coordinator/v3.0.18/hyperf-coordinator-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/coordinator/v3.0.18/hyperf-coordinator-v3.0.18.zip",
                 "reference": "2addc9c2071c7318aa64dbdab50a658365ad9c12",
                 "shasum": ""
             },
@@ -1275,7 +1272,7 @@
             "version": "v3.0.16",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/coroutine/v3.0.16/hyperf-coroutine-v3.0.16.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/coroutine/v3.0.16/hyperf-coroutine-v3.0.16.zip",
                 "reference": "4944ce69d5f35407e5dbcf7e9991f1db3366f254",
                 "shasum": ""
             },
@@ -1317,7 +1314,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/crontab/v3.0.18/hyperf-crontab-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/crontab/v3.0.18/hyperf-crontab-v3.0.18.zip",
                 "reference": "8cd73b5f6c4f2e673f9d8a116d0f8a53c2f0df7a",
                 "shasum": ""
             },
@@ -1361,11 +1358,11 @@
         },
         {
             "name": "hyperf/database",
-            "version": "v3.0.20",
+            "version": "v3.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/database/v3.0.20/hyperf-database-v3.0.20.zip",
-                "reference": "ee2b160443fd505112ad4ed19274979daa32c1db",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/database/v3.0.21/hyperf-database-v3.0.21.zip",
+                "reference": "1865306274dcda7ab5a96d9e87cd64de58faafd9",
                 "shasum": ""
             },
             "require": {
@@ -1406,14 +1403,14 @@
                 "hyperf",
                 "php"
             ],
-            "time": "2023-05-08T01:23:36+00:00"
+            "time": "2023-05-16T08:28:13+00:00"
         },
         {
             "name": "hyperf/db-connection",
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/db-connection/v3.0.18/hyperf-db-connection-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/db-connection/v3.0.18/hyperf-db-connection-v3.0.18.zip",
                 "reference": "e4264bbaaa4b2f6a02096400ee05e4289b6a5509",
                 "shasum": ""
             },
@@ -1460,7 +1457,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/di/v3.0.18/hyperf-di-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/di/v3.0.18/hyperf-di-v3.0.18.zip",
                 "reference": "32664ce4aee7e640473be9672ee282ac0076d74b",
                 "shasum": ""
             },
@@ -1513,7 +1510,7 @@
             "version": "v3.0.16",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/dispatcher/v3.0.16/hyperf-dispatcher-v3.0.16.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/dispatcher/v3.0.16/hyperf-dispatcher-v3.0.16.zip",
                 "reference": "0fff102b6011642697c131f2bc9ca5f0061a048e",
                 "shasum": ""
             },
@@ -1558,7 +1555,7 @@
             "version": "v2.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/engine/v2.8.1/hyperf-engine-v2.8.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/engine/v2.8.1/hyperf-engine-v2.8.1.zip",
                 "reference": "012952e268f0a94840669bcf736c14c5ce93adbb",
                 "shasum": ""
             },
@@ -1618,7 +1615,7 @@
             "version": "v1.7.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/engine-contract/v1.7.0/hyperf-engine-contract-v1.7.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/engine-contract/v1.7.0/hyperf-engine-contract-v1.7.0.zip",
                 "reference": "69b64d723271351ab549c5204a9caef35d9d68df",
                 "shasum": ""
             },
@@ -1665,7 +1662,7 @@
             "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/event/v3.0.0/hyperf-event-v3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/event/v3.0.0/hyperf-event-v3.0.0.zip",
                 "reference": "e10cd5e8b7f02bad9c542c3592b495debba9a39a",
                 "shasum": ""
             },
@@ -1709,7 +1706,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/exception-handler/v3.0.18/hyperf-exception-handler-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/exception-handler/v3.0.18/hyperf-exception-handler-v3.0.18.zip",
                 "reference": "30984d6500e4d11b8c57c1ae500d2d7ba7602504",
                 "shasum": ""
             },
@@ -1753,7 +1750,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/framework/v3.0.18/hyperf-framework-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/framework/v3.0.18/hyperf-framework-v3.0.18.zip",
                 "reference": "0e73f916e9295584dc2d3c3c0560f497d4412768",
                 "shasum": ""
             },
@@ -1808,7 +1805,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/guzzle/v3.0.18/hyperf-guzzle-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/guzzle/v3.0.18/hyperf-guzzle-v3.0.18.zip",
                 "reference": "44d3b1abfba72cb969ece8a5bf47818cc6d49a71",
                 "shasum": ""
             },
@@ -1853,7 +1850,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/http-message/v3.0.18/hyperf-http-message-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-message/v3.0.18/hyperf-http-message-v3.0.18.zip",
                 "reference": "23affffb7a15842f990144b5bd49641e4de8dda4",
                 "shasum": ""
             },
@@ -1897,11 +1894,11 @@
         },
         {
             "name": "hyperf/http-server",
-            "version": "v3.0.20",
+            "version": "v3.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/http-server/v3.0.20/hyperf-http-server-v3.0.20.zip",
-                "reference": "a571e72b56a95d083a2e8f98473ca0a44d9d20ff",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/http-server/v3.0.21/hyperf-http-server-v3.0.21.zip",
+                "reference": "da1983bf6cd230556f04caf17b4e71fe82773805",
                 "shasum": ""
             },
             "require": {
@@ -1951,14 +1948,14 @@
                 "php",
                 "swoole"
             ],
-            "time": "2023-05-12T01:37:15+00:00"
+            "time": "2023-05-15T01:29:36+00:00"
         },
         {
             "name": "hyperf/logger",
             "version": "v3.0.20",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/logger/v3.0.20/hyperf-logger-v3.0.20.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/logger/v3.0.20/hyperf-logger-v3.0.20.zip",
                 "reference": "24a3b87f646ab6684310ead0b277e2464c6c5cab",
                 "shasum": ""
             },
@@ -2002,7 +1999,7 @@
             "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/macroable/v3.0.0/hyperf-macroable-v3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/macroable/v3.0.0/hyperf-macroable-v3.0.0.zip",
                 "reference": "822de69ba0c75aa9767a9cea487b84bf31d5240a",
                 "shasum": ""
             },
@@ -2038,7 +2035,7 @@
             "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/memory/v3.0.0/hyperf-memory-v3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/memory/v3.0.0/hyperf-memory-v3.0.0.zip",
                 "reference": "c7217c9b5177562329074d332f9e13b40693bdfe",
                 "shasum": ""
             },
@@ -2077,7 +2074,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/model-cache/v3.0.18/hyperf-model-cache-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/model-cache/v3.0.18/hyperf-model-cache-v3.0.18.zip",
                 "reference": "a940e9a6f2a7e2e824a9645a12e05351f5a2f4fe",
                 "shasum": ""
             },
@@ -2125,7 +2122,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/model-listener/v3.0.18/hyperf-model-listener-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/model-listener/v3.0.18/hyperf-model-listener-v3.0.18.zip",
                 "reference": "2167252ea7bdc8626cfd3d44f0f4709502c10432",
                 "shasum": ""
             },
@@ -2171,7 +2168,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/paginator/v3.0.18/hyperf-paginator-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/paginator/v3.0.18/hyperf-paginator-v3.0.18.zip",
                 "reference": "5e732c60fb47be062970a2d436e3bee341f15302",
                 "shasum": ""
             },
@@ -2217,7 +2214,7 @@
             "version": "v3.0.16",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/pipeline/v3.0.16/hyperf-pipeline-v3.0.16.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/pipeline/v3.0.16/hyperf-pipeline-v3.0.16.zip",
                 "reference": "a3f48561f5cfef5f697e7005446e16560024a443",
                 "shasum": ""
             },
@@ -2254,7 +2251,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/pool/v3.0.18/hyperf-pool-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/pool/v3.0.18/hyperf-pool-v3.0.18.zip",
                 "reference": "44c87d46a1619554deed3879e8db675654ffd051",
                 "shasum": ""
             },
@@ -2297,7 +2294,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/process/v3.0.18/hyperf-process-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/process/v3.0.18/hyperf-process-v3.0.18.zip",
                 "reference": "06ce0963a5a79fd229c62f1b98f7508d34294db2",
                 "shasum": ""
             },
@@ -2342,11 +2339,11 @@
         },
         {
             "name": "hyperf/redis",
-            "version": "v3.0.18",
+            "version": "v3.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/redis/v3.0.18/hyperf-redis-v3.0.18.zip",
-                "reference": "ada65d3197425d52a0bbeb61df6c5acce54ecc2d",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/redis/v3.0.21/hyperf-redis-v3.0.21.zip",
+                "reference": "65ec6cbecb64793670ef1a512bd15369b683c746",
                 "shasum": ""
             },
             "require": {
@@ -2388,14 +2385,14 @@
                 "pool",
                 "redis"
             ],
-            "time": "2023-04-26T03:02:31+00:00"
+            "time": "2023-05-15T04:08:45+00:00"
         },
         {
             "name": "hyperf/serializer",
             "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/serializer/v3.0.0/hyperf-serializer-v3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/serializer/v3.0.0/hyperf-serializer-v3.0.0.zip",
                 "reference": "c4efedaa072c5ffe196e95e0c74a9d90fd1e4811",
                 "shasum": ""
             },
@@ -2440,7 +2437,7 @@
             "version": "v3.0.20",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/server/v3.0.20/hyperf-server-v3.0.20.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/server/v3.0.20/hyperf-server-v3.0.20.zip",
                 "reference": "d4176a090fd4b9e0f68f0d3e0de57db0fa98aaed",
                 "shasum": ""
             },
@@ -2492,7 +2489,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/session/v3.0.18/hyperf-session-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/session/v3.0.18/hyperf-session-v3.0.18.zip",
                 "reference": "8c7d727c2c66f464e2b11d2a3ebee2d108b92c0b",
                 "shasum": ""
             },
@@ -2537,7 +2534,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/stringable/v3.0.18/hyperf-stringable-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/stringable/v3.0.18/hyperf-stringable-v3.0.18.zip",
                 "reference": "ca7ec4808978e84c3b59e39c3c29229266c6fe11",
                 "shasum": ""
             },
@@ -2633,7 +2630,7 @@
             "version": "v3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/tappable/v3.0.0/hyperf-tappable-v3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/tappable/v3.0.0/hyperf-tappable-v3.0.0.zip",
                 "reference": "4f90b9026a5bdce5b3e6be29a2ab7a86c54f372a",
                 "shasum": ""
             },
@@ -2672,7 +2669,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/translation/v3.0.18/hyperf-translation-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/translation/v3.0.18/hyperf-translation-v3.0.18.zip",
                 "reference": "bc174e812fe9a54ddb0b5549863e2dcb74d1a96c",
                 "shasum": ""
             },
@@ -2716,7 +2713,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/utils/v3.0.18/hyperf-utils-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/utils/v3.0.18/hyperf-utils-v3.0.18.zip",
                 "reference": "2e59cef3dd562053fe7c9b2a41e7243b4ee23bd6",
                 "shasum": ""
             },
@@ -2830,7 +2827,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/view/v3.0.18/hyperf-view-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/view/v3.0.18/hyperf-view-v3.0.18.zip",
                 "reference": "cbbd40c37be5d6d3729c551314a7186d76de2507",
                 "shasum": ""
             },
@@ -2880,7 +2877,7 @@
             "version": "2.7.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/intervention/image/2.7.2/intervention-image-2.7.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/intervention/image/2.7.2/intervention-image-2.7.2.zip",
                 "reference": "04be355f8d6734c826045d02a1079ad658322dad",
                 "shasum": ""
             },
@@ -2944,7 +2941,7 @@
             "version": "2.11.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/laminas/laminas-mime/2.11.0/laminas-laminas-mime-2.11.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/laminas/laminas-mime/2.11.0/laminas-laminas-mime-2.11.0.zip",
                 "reference": "60ec04b755821c79c1987ce291b44e69f2c0831f",
                 "shasum": ""
             },
@@ -2985,7 +2982,7 @@
             "version": "3.17.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/laminas/laminas-stdlib/3.17.0/laminas-laminas-stdlib-3.17.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/laminas/laminas-stdlib/3.17.0/laminas-laminas-stdlib-3.17.0.zip",
                 "reference": "dd35c868075bad80b6718959740913e178eb4274",
                 "shasum": ""
             },
@@ -3024,7 +3021,7 @@
             "version": "3.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/monolog/monolog/3.3.1/monolog-monolog-3.3.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/monolog/monolog/3.3.1/monolog-monolog-3.3.1.zip",
                 "reference": "9b5daeaffce5b926cac47923798bba91059e60e2",
                 "shasum": ""
             },
@@ -3105,7 +3102,7 @@
             "version": "2.66.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/nesbot/carbon/2.66.0/nesbot-carbon-2.66.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/nesbot/carbon/2.66.0/nesbot-carbon-2.66.0.zip",
                 "reference": "496712849902241f04902033b0441b269effe001",
                 "shasum": ""
             },
@@ -3182,7 +3179,7 @@
             "version": "v1.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/nikic/fast-route/v1.3.0/nikic-fast-route-v1.3.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/nikic/fast-route/v1.3.0/nikic-fast-route-v1.3.0.zip",
                 "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
                 "shasum": ""
             },
@@ -3219,11 +3216,11 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.15.4",
+            "version": "v4.15.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/nikic/php-parser/v4.15.4/nikic-php-parser-v4.15.4.zip",
-                "reference": "6bb5176bc4af8bcb7d926f88718db9b96a2d4290",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/nikic/php-parser/v4.15.5/nikic-php-parser-v4.15.5.zip",
+                "reference": "11e2663a5bc9db5d714eedb4277ee300403b4a9e",
                 "shasum": ""
             },
             "require": {
@@ -3261,14 +3258,14 @@
                 "parser",
                 "php"
             ],
-            "time": "2023-03-05T19:49:14+00:00"
+            "time": "2023-05-19T20:20:00+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
             "version": "2.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/php-di/phpdoc-reader/2.2.1/php-di-phpdoc-reader-2.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/php-di/phpdoc-reader/2.2.1/php-di-phpdoc-reader-2.2.1.zip",
                 "reference": "66daff34cbd2627740ffec9469ffbac9f8c8185c",
                 "shasum": ""
             },
@@ -3300,7 +3297,7 @@
             "version": "1.9.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpoption/phpoption/1.9.1/phpoption-phpoption-1.9.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpoption/phpoption/1.9.1/phpoption-phpoption-1.9.1.zip",
                 "reference": "dd3a383e599f49777d8b628dadbb90cae435b87e",
                 "shasum": ""
             },
@@ -3481,7 +3478,7 @@
             "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-factory/1.0.2/psr-http-factory-1.0.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/http-factory/1.0.2/psr-http-factory-1.0.2.zip",
                 "reference": "e616d01114759c4c489f93b099585439f795fe35",
                 "shasum": ""
             },
@@ -3527,7 +3524,7 @@
             "version": "1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-message/1.1/psr-http-message-1.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/http-message/1.1/psr-http-message-1.1.zip",
                 "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
@@ -3571,7 +3568,7 @@
             "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-server-handler/1.0.2/psr-http-server-handler-1.0.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/http-server-handler/1.0.2/psr-http-server-handler-1.0.2.zip",
                 "reference": "84c4fb66179be4caaf8e97bd239203245302e7d4",
                 "shasum": ""
             },
@@ -3618,7 +3615,7 @@
             "version": "1.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/http-server-middleware/1.0.2/psr-http-server-middleware-1.0.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/http-server-middleware/1.0.2/psr-http-server-middleware-1.0.2.zip",
                 "reference": "c1481f747daaa6a0782775cd6a8c26a1bf4a3829",
                 "shasum": ""
             },
@@ -3665,7 +3662,7 @@
             "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/log/3.0.0/psr-log-3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/log/3.0.0/psr-log-3.0.0.zip",
                 "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
                 "shasum": ""
             },
@@ -3748,7 +3745,7 @@
             "version": "3.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/ralouphie/getallheaders/3.0.3/ralouphie-getallheaders-3.0.3.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/ralouphie/getallheaders/3.0.3/ralouphie-getallheaders-3.0.3.zip",
                 "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
@@ -3818,7 +3815,7 @@
             "version": "v6.2.10",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/console/v6.2.10/symfony-console-v6.2.10.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/console/v6.2.10/symfony-console-v6.2.10.zip",
                 "reference": "12288d9f4500f84a4d02254d4aa968b15488476f",
                 "shasum": ""
             },
@@ -3891,7 +3888,7 @@
             "version": "v3.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/deprecation-contracts/v3.2.1/symfony-deprecation-contracts-v3.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/deprecation-contracts/v3.2.1/symfony-deprecation-contracts-v3.2.1.zip",
                 "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
                 "shasum": ""
             },
@@ -3935,7 +3932,7 @@
             "version": "v5.4.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/finder/v5.4.21/symfony-finder-v5.4.21.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/finder/v5.4.21/symfony-finder-v5.4.21.zip",
                 "reference": "078e9a5e1871fcfe6a5ce421b539344c21afef19",
                 "shasum": ""
             },
@@ -3975,7 +3972,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-ctype/v1.27.0/symfony-polyfill-ctype-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-ctype/v1.27.0/symfony-polyfill-ctype-v1.27.0.zip",
                 "reference": "5bbc823adecdae860bb64756d639ecfec17b050a",
                 "shasum": ""
             },
@@ -4034,7 +4031,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-intl-grapheme/v1.27.0/symfony-polyfill-intl-grapheme-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-intl-grapheme/v1.27.0/symfony-polyfill-intl-grapheme-v1.27.0.zip",
                 "reference": "511a08c03c1960e08a883f4cffcacd219b758354",
                 "shasum": ""
             },
@@ -4092,7 +4089,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-intl-idn/v1.27.0/symfony-polyfill-intl-idn-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-intl-idn/v1.27.0/symfony-polyfill-intl-idn-v1.27.0.zip",
                 "reference": "639084e360537a19f9ee352433b84ce831f3d2da",
                 "shasum": ""
             },
@@ -4156,7 +4153,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-intl-normalizer/v1.27.0/symfony-polyfill-intl-normalizer-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-intl-normalizer/v1.27.0/symfony-polyfill-intl-normalizer-v1.27.0.zip",
                 "reference": "19bd1e4fcd5b91116f14d8533c57831ed00571b6",
                 "shasum": ""
             },
@@ -4217,7 +4214,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-mbstring/v1.27.0/symfony-polyfill-mbstring-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-mbstring/v1.27.0/symfony-polyfill-mbstring-v1.27.0.zip",
                 "reference": "8ad114f6b39e2c98a8b0e3bd907732c207c2b534",
                 "shasum": ""
             },
@@ -4277,7 +4274,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-php72/v1.27.0/symfony-polyfill-php72-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-php72/v1.27.0/symfony-polyfill-php72-v1.27.0.zip",
                 "reference": "869329b1e9894268a8a61dabb69153029b7a8c97",
                 "shasum": ""
             },
@@ -4330,7 +4327,7 @@
             "version": "v1.27.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/polyfill-php80/v1.27.0/symfony-polyfill-php80-v1.27.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/polyfill-php80/v1.27.0/symfony-polyfill-php80-v1.27.0.zip",
                 "reference": "7a6ff3f1959bb01aefccb463a0f2cd3d3d2fd936",
                 "shasum": ""
             },
@@ -4452,7 +4449,7 @@
             "version": "v6.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/string/v6.2.8/symfony-string-v6.2.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/string/v6.2.8/symfony-string-v6.2.8.zip",
                 "reference": "193e83bbd6617d6b2151c37fff10fa7168ebddef",
                 "shasum": ""
             },
@@ -4515,7 +4512,7 @@
             "version": "v6.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/translation/v6.2.8/symfony-translation-v6.2.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/translation/v6.2.8/symfony-translation-v6.2.8.zip",
                 "reference": "817535dbb1721df8b3a8f2489dc7e50bcd6209b5",
                 "shasum": ""
             },
@@ -4590,7 +4587,7 @@
             "version": "v3.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/translation-contracts/v3.2.1/symfony-translation-contracts-v3.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/translation-contracts/v3.2.1/symfony-translation-contracts-v3.2.1.zip",
                 "reference": "dfec258b9dd17a6b24420d464c43bffe347441c8",
                 "shasum": ""
             },
@@ -4648,7 +4645,7 @@
             "version": "v5.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/vlucas/phpdotenv/v5.5.0/vlucas-phpdotenv-v5.5.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/vlucas/phpdotenv/v5.5.0/vlucas-phpdotenv-v5.5.0.zip",
                 "reference": "1a7ea2afc49c3ee6d87061f5a233e3a035d0eae7",
                 "shasum": ""
             },
@@ -4714,7 +4711,7 @@
             "version": "3.1.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/composer/pcre/3.1.0/composer-pcre-3.1.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/composer/pcre/3.1.0/composer-pcre-3.1.0.zip",
                 "reference": "4bff79ddd77851fe3cdd11616ed3f92841ba5bd2",
                 "shasum": ""
             },
@@ -4858,7 +4855,7 @@
             "version": "1.14.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/doctrine/annotations/1.14.3/doctrine-annotations-1.14.3.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/doctrine/annotations/1.14.3/doctrine-annotations-1.14.3.zip",
                 "reference": "fb0d71a7393298a7b232cbf4c8b1f73f3ec3d5af",
                 "shasum": ""
             },
@@ -4924,7 +4921,7 @@
             "version": "v3.14.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/friendsofphp/php-cs-fixer/v3.14.2/friendsofphp-php-cs-fixer-v3.14.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/friendsofphp/php-cs-fixer/v3.14.2/friendsofphp-php-cs-fixer-v3.14.2.zip",
                 "reference": "14f0541651841b63640e7aafad041ad55dc7aa88",
                 "shasum": ""
             },
@@ -4998,7 +4995,7 @@
             "version": "v2.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hamcrest/hamcrest-php/v2.0.1/hamcrest-hamcrest-php-v2.0.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hamcrest/hamcrest-php/v2.0.1/hamcrest-hamcrest-php-v2.0.1.zip",
                 "reference": "8c3d0a3f6af734494ad8f6fbbee0ba92422859f3",
                 "shasum": ""
             },
@@ -5093,7 +5090,7 @@
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/devtool/v3.0.18/hyperf-devtool-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/devtool/v3.0.18/hyperf-devtool-v3.0.18.zip",
                 "reference": "6318b261197c333f69e19de2d2ea36ffcb45383b",
                 "shasum": ""
             },
@@ -5135,11 +5132,11 @@
         },
         {
             "name": "hyperf/testing",
-            "version": "v3.0.20",
+            "version": "v3.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/testing/v3.0.20/hyperf-testing-v3.0.20.zip",
-                "reference": "2ab3f0ecb14db9550436746f2d6c6f6486dab3d5",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/testing/v3.0.21/hyperf-testing-v3.0.21.zip",
+                "reference": "d5c5d04541cec829a187d5a1b70bd6a152ed507e",
                 "shasum": ""
             },
             "require": {
@@ -5153,7 +5150,8 @@
                 "hyperf/utils": "~3.0.0",
                 "php": ">=8.0",
                 "phpunit/phpunit": "^9.5",
-                "psr/container": "^1.0|^2.0"
+                "psr/container": "^1.0|^2.0",
+                "symfony/http-foundation": "^5.4|^6.0"
             },
             "bin": [
                 "co-phpunit"
@@ -5178,14 +5176,14 @@
                 "swoole",
                 "testing"
             ],
-            "time": "2023-05-12T01:37:15+00:00"
+            "time": "2023-05-17T05:55:36+00:00"
         },
         {
             "name": "hyperf/watcher",
             "version": "v3.0.18",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/hyperf/watcher/v3.0.18/hyperf-watcher-v3.0.18.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/hyperf/watcher/v3.0.18/hyperf-watcher-v3.0.18.zip",
                 "reference": "7c9c584ea19bc8e1cc7494e80cd19a2a25706f7d",
                 "shasum": ""
             },
@@ -5230,7 +5228,7 @@
             "version": "1.5.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/mockery/mockery/1.5.1/mockery-mockery-1.5.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/mockery/mockery/1.5.1/mockery-mockery-1.5.1.zip",
                 "reference": "e92dcc83d5a51851baf5f5591d32cb2b16e3684e",
                 "shasum": ""
             },
@@ -5385,7 +5383,7 @@
             "version": "3.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phar-io/version/3.2.1/phar-io-version-3.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phar-io/version/3.2.1/phar-io-version-3.2.1.zip",
                 "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
                 "shasum": ""
             },
@@ -5426,7 +5424,7 @@
             "version": "1.10.15",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpstan/phpstan/1.10.15/phpstan-phpstan-1.10.15.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpstan/phpstan/1.10.15/phpstan-phpstan-1.10.15.zip",
                 "reference": "762c4dac4da6f8756eebb80e528c3a47855da9bd",
                 "shasum": ""
             },
@@ -5461,7 +5459,7 @@
             "version": "9.2.26",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpunit/php-code-coverage/9.2.26/phpunit-php-code-coverage-9.2.26.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpunit/php-code-coverage/9.2.26/phpunit-php-code-coverage-9.2.26.zip",
                 "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
                 "shasum": ""
             },
@@ -5522,7 +5520,7 @@
             "version": "3.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpunit/php-file-iterator/3.0.6/phpunit-php-file-iterator-3.0.6.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpunit/php-file-iterator/3.0.6/phpunit-php-file-iterator-3.0.6.zip",
                 "reference": "cf1c2e7c203ac650e352f4cc675a7021e7d1b3cf",
                 "shasum": ""
             },
@@ -5566,7 +5564,7 @@
             "version": "3.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpunit/php-invoker/3.1.1/phpunit-php-invoker-3.1.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpunit/php-invoker/3.1.1/phpunit-php-invoker-3.1.1.zip",
                 "reference": "5a10147d0aaf65b58940a0b72f71c9ac0423cc67",
                 "shasum": ""
             },
@@ -5656,7 +5654,7 @@
             "version": "5.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpunit/php-timer/5.0.3/phpunit-php-timer-5.0.3.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpunit/php-timer/5.0.3/phpunit-php-timer-5.0.3.zip",
                 "reference": "5a63ce20ed1b5bf577850e2c4e87f4aa902afbd2",
                 "shasum": ""
             },
@@ -5699,7 +5697,7 @@
             "version": "9.6.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/phpunit/phpunit/9.6.8/phpunit-phpunit-9.6.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/phpunit/phpunit/9.6.8/phpunit-phpunit-9.6.8.zip",
                 "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e",
                 "shasum": ""
             },
@@ -5777,7 +5775,7 @@
             "version": "3.0.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/psr/cache/3.0.0/psr-cache-3.0.0.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/psr/cache/3.0.0/psr-cache-3.0.0.zip",
                 "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
                 "shasum": ""
             },
@@ -5817,7 +5815,7 @@
             "version": "1.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/cli-parser/1.0.1/sebastian-cli-parser-1.0.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/cli-parser/1.0.1/sebastian-cli-parser-1.0.1.zip",
                 "reference": "442e7c7e687e42adc03470c7b668bc4b2402c0b2",
                 "shasum": ""
             },
@@ -5857,7 +5855,7 @@
             "version": "1.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/code-unit/1.0.8/sebastian-code-unit-1.0.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/code-unit/1.0.8/sebastian-code-unit-1.0.8.zip",
                 "reference": "1fc9f64c0927627ef78ba436c9b17d967e68e120",
                 "shasum": ""
             },
@@ -5936,7 +5934,7 @@
             "version": "4.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/comparator/4.0.8/sebastian-comparator-4.0.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/comparator/4.0.8/sebastian-comparator-4.0.8.zip",
                 "reference": "fa0f136dd2334583309d32b62544682ee972b51a",
                 "shasum": ""
             },
@@ -5994,7 +5992,7 @@
             "version": "2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/complexity/2.0.2/sebastian-complexity-2.0.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/complexity/2.0.2/sebastian-complexity-2.0.2.zip",
                 "reference": "739b35e53379900cc9ac327b2147867b8b6efd88",
                 "shasum": ""
             },
@@ -6035,7 +6033,7 @@
             "version": "4.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/diff/4.0.5/sebastian-diff-4.0.5.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/diff/4.0.5/sebastian-diff-4.0.5.zip",
                 "reference": "74be17022044ebaaecfdf0c5cd504fc9cd5a7131",
                 "shasum": ""
             },
@@ -6085,7 +6083,7 @@
             "version": "5.1.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/environment/5.1.5/sebastian-environment-5.1.5.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/environment/5.1.5/sebastian-environment-5.1.5.zip",
                 "reference": "830c43a844f1f8d5b7a1f6d6076b784454d8b7ed",
                 "shasum": ""
             },
@@ -6241,7 +6239,7 @@
             "version": "1.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/lines-of-code/1.0.3/sebastian-lines-of-code-1.0.3.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/lines-of-code/1.0.3/sebastian-lines-of-code-1.0.3.zip",
                 "reference": "c1c2e997aa3146983ed888ad08b15470a2e22ecc",
                 "shasum": ""
             },
@@ -6282,7 +6280,7 @@
             "version": "4.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/object-enumerator/4.0.4/sebastian-object-enumerator-4.0.4.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/object-enumerator/4.0.4/sebastian-object-enumerator-4.0.4.zip",
                 "reference": "5c9eeac41b290a3712d88851518825ad78f45c71",
                 "shasum": ""
             },
@@ -6323,7 +6321,7 @@
             "version": "2.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/object-reflector/2.0.4/sebastian-object-reflector-2.0.4.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/object-reflector/2.0.4/sebastian-object-reflector-2.0.4.zip",
                 "reference": "b4f479ebdbf63ac605d183ece17d8d7fe49c15c7",
                 "shasum": ""
             },
@@ -6362,7 +6360,7 @@
             "version": "4.0.5",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/recursion-context/4.0.5/sebastian-recursion-context-4.0.5.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/recursion-context/4.0.5/sebastian-recursion-context-4.0.5.zip",
                 "reference": "e75bd0f07204fec2a0af9b0f3cfe97d05f92efc1",
                 "shasum": ""
             },
@@ -6488,7 +6486,7 @@
             "version": "3.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/sebastian/version/3.0.2/sebastian-version-3.0.2.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/sebastian/version/3.0.2/sebastian-version-3.0.2.zip",
                 "reference": "c6c1022351a901512170118436c764e473f6de8c",
                 "shasum": ""
             },
@@ -6525,7 +6523,7 @@
             "version": "5.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/swoole/ide-helper/5.0.3/swoole-ide-helper-5.0.3.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/swoole/ide-helper/5.0.3/swoole-ide-helper-5.0.3.zip",
                 "reference": "4b6e615cb27c251b6248b8bd9501edbd02a45c18",
                 "shasum": ""
             },
@@ -6547,7 +6545,7 @@
             "version": "v6.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/event-dispatcher/v6.2.8/symfony-event-dispatcher-v6.2.8.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/event-dispatcher/v6.2.8/symfony-event-dispatcher-v6.2.8.zip",
                 "reference": "04046f35fd7d72f9646e721fc2ecb8f9c67d3339",
                 "shasum": ""
             },
@@ -6607,7 +6605,7 @@
             "version": "v3.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/event-dispatcher-contracts/v3.2.1/symfony-event-dispatcher-contracts-v3.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/event-dispatcher-contracts/v3.2.1/symfony-event-dispatcher-contracts-v3.2.1.zip",
                 "reference": "0ad3b6f1e4e2da5690fefe075cd53a238646d8dd",
                 "shasum": ""
             },
@@ -6695,6 +6693,61 @@
                 }
             ],
             "description": "Provides basic utilities for the filesystem",
+            "homepage": "https://symfony.com",
+            "time": "2023-04-18T13:46:08+00:00"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v6.2.10",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/http-foundation/v6.2.10/symfony-http-foundation-v6.2.10.zip",
+                "reference": "49adbb92bcb4e3c2943719d2756271e8b9602acc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/polyfill-mbstring": "~1.1"
+            },
+            "conflict": {
+                "symfony/cache": "<6.2"
+            },
+            "require-dev": {
+                "predis/predis": "~1.0",
+                "symfony/cache": "^5.4|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/expression-language": "^5.4|^6.0",
+                "symfony/http-kernel": "^5.4.12|^6.0.12|^6.1.4",
+                "symfony/mime": "^5.4|^6.0",
+                "symfony/rate-limiter": "^5.2|^6.0"
+            },
+            "suggest": {
+                "symfony/mime": "To use the file extension guesser"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "time": "2023-04-18T13:46:08+00:00"
         },
@@ -6841,7 +6894,7 @@
             "version": "v6.2.7",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/stopwatch/v6.2.7/symfony-stopwatch-v6.2.7.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/symfony/stopwatch/v6.2.7/symfony-stopwatch-v6.2.7.zip",
                 "reference": "f3adc98c1061875dd2edcd45e5b04e63d0e29f8f",
                 "shasum": ""
             },
@@ -6880,7 +6933,7 @@
             "version": "1.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/theseer/tokenizer/1.2.1/theseer-tokenizer-1.2.1.zip",
+                "url": "https://mirrors.cloud.tencent.com/repository/composer/theseer/tokenizer/1.2.1/theseer-tokenizer-1.2.1.zip",
                 "reference": "34a41e998c2183e22995f158c581e7b5e755ab9e",
                 "shasum": ""
             },
