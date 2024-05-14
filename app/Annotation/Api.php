@@ -15,5 +15,4 @@ use \Attribute;
 #[Attribute(Attribute::TARGET_ALL)]
 class Api extends AbstractAnnotation
 {
-
 }

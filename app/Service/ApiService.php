@@ -9,7 +9,8 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Hyperf\Utils\Codec\Json;
+use \Hyperf\Codec\Json;
+use function Hyperf\Config\config;
 
 class ApiService
 {
@@ -60,5 +61,12 @@ class ApiService
         } else {
             return $data;
         }
+    }
+
+    public function decryptData(string $data_str = ''): array
+    {
+        $key = $this->getApiKey();
+
+        return Json::decode(openssl_decrypt($data_str, "AES-128-ECB", $key));
     }
 }

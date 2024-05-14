@@ -14,6 +14,7 @@ use \Attribute;
 #[Attribute(Attribute::TARGET_ALL)]
 class View extends AbstractAnnotation
 {
-    public string $template = '';
-    public bool $layout = true;
+    public function __construct(public string $template = '', public bool $layout = true)
+    {
+    }
 }
